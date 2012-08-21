@@ -256,8 +256,7 @@ object MainForm: TMainForm
       end>
   end
   object IBD: TIBDatabase
-    Connected = True
-    DatabaseName = '192.168.1.153:D:\SERVER\FBase\moxa\MOXA.FDB'
+    DatabaseName = '192.168.1.153:D:\SERVER\MOXA.FDB'
     Params.Strings = (
       'user_name=SYSDBA'
       'password=masterkey'
@@ -478,7 +477,7 @@ object MainForm: TMainForm
     Top = 128
   end
   object ibTrnsctn: TIBTransaction
-    Active = True
+    Active = False
     DefaultDatabase = IBD
     Params.Strings = (
       'read_committed'
