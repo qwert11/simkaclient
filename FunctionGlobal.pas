@@ -88,14 +88,6 @@ begin
     Result[findComa(Result)] := '.';
 end;  
 
-function ToStrNull(V: Variant): string;
-begin
-  if VarIsNull(V) then
-    Result := 'NULL'
-  else
-    Result := VarToStr(V)
-end;
-
 procedure MaskKeyEdit(Sender: TObject; var Key: Char; AMask: TMask);
 begin                             // '0'..'9',DecimalSeparator
   if Key = ',' then
@@ -122,5 +114,13 @@ begin
   if (S <> '') and (S <> null) then
     Result := S
 end;  
+
+function ToStrNull(V: Variant): string;
+begin
+  if VarIsNull(V) then
+    Result := 'NULL'
+  else
+    Result := VarToStr(V)
+end;
 
 end.
